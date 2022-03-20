@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View,ScrollView } from "react-native";
+import { StyleSheet, Text, View, ScrollView, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 
 export default function App() {
   return (
@@ -14,22 +15,108 @@ export default function App() {
         <View>
           <FontAwesome name="search" size={30} color="black" />
         </View>
-
       </View>
 
       <ScrollView>
-  <View style={styles.backforimage}>
+        <View style={styles.backforimage}>
+          <View style={styles.infobox}>
+            <Text style={styles.textheading}>Docko MultiSpecial Hospital</Text>
+            <Text style={styles.textheading}>
+              Best Experience Medical Industry
+            </Text>
+            <Text style={styles.textheading}>
+              OverAll 20 Years Plus Experience Doctors Available
+            </Text>
+          </View>
+        </View>
 
-    <View style={styles.infobox}>
-    <Text style={styles.textheading}>Docko MultiSpecial Hospital</Text>
-    <Text style={styles.textheading}>Best Experience Medical Industry</Text>
-    <Text style={styles.textheading}>OverAll 20 Years Plus Experience Doctors Available</Text>
+        <Text style={styles.Heading}>Categories</Text>
 
+        <View>
+          <Text style={styles.CateText}>Cardiologist</Text>
+          <Text style={styles.CateText}>Eyes</Text>
+          <Text style={styles.CateText}>Pediatrician</Text>
+        </View>
 
-    </View>
+        <Text style={styles.Headingtwo}>Top Rated Doctors</Text>
 
-  </View>
-</ScrollView>
+        <View style={styles.DoctorInfoback}>
+          <View style={styles.DoctorOne}>
+            <Image
+              style={styles.ImageOne}
+              source={require("./assets/Doc1.jpg")}
+            />
+
+            <View style={styles.Stars}>
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+            </View>
+
+            <Text style={styles.NameofDoctor}>Mathew Chambers</Text>
+
+            <Text style={styles.SpecialofDoc}>BoneSpecialist</Text>
+          </View>
+
+          <View style={styles.DoctorOne}>
+            <Image
+              style={styles.ImageOne}
+              source={require("./assets/Doc4.jpg")}
+            />
+
+            <View style={styles.Stars}>
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+            </View>
+
+            <Text style={styles.NameofDoctor}>Olivia</Text>
+
+            <Text style={styles.SpecialofDoc}>Neurolog</Text>
+          </View>
+          <View style={styles.DoctorOne}>
+            <Image
+              style={styles.ImageOne}
+              source={require("./assets/Doc3.jpg")}
+            />
+
+            <View style={styles.Stars}>
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+            </View>
+
+            <Text style={styles.NameofDoctor}>Robert</Text>
+
+            <Text style={styles.SpecialofDoc}>Ophthalmology</Text>
+          </View>
+
+          <View style={styles.DoctorOne}>
+            <Image
+              style={styles.ImageOne}
+              source={require("./assets/Doc2.jpg")}
+            />
+
+            <View style={styles.Stars}>
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+              <AntDesign name="star" size={24} color="gold" />
+            </View>
+
+            <Text style={styles.NameofDoctor}>James</Text>
+
+            <Text style={styles.SpecialofDoc}>Surgeon</Text>
+          </View>
+        </View>
+      </ScrollView>
 
       <StatusBar style="auto" />
     </View>
@@ -53,17 +140,17 @@ const styles = StyleSheet.create({
   },
 
   backforimage: {
-    width: '100%',
+    width: "100%",
     height: 250,
-    flexDirection: 'row',
+    flexDirection: "row",
     justifyContent: "center",
-    alignItems: 'center',
+    alignItems: "center",
   },
 
   infobox: {
-    width: '80%',
+    width: "80%",
     height: 200,
-    backgroundColor: '#00CCFF',
+    backgroundColor: "#00CCFF",
     borderRadius: 10,
     padding: 20,
   },
@@ -71,6 +158,71 @@ const styles = StyleSheet.create({
   textheading: {
     fontSize: 20,
     marginTop: 8,
-    fontWeight: 'bold',
-  }
+    fontWeight: "bold",
+  },
+
+  Heading: {
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+
+  CateText: {
+    fontSize: 20,
+    backgroundColor: "#00CCFF",
+    padding: 6,
+    fontWeight: "bold",
+    color: "#000",
+    width: "40%",
+    marginTop: 10,
+    marginLeft: 15,
+    borderRadius: 10,
+  },
+
+  DoctorInfoback: {
+    width: "100%",
+    height: 1700,
+    flexDirection: "column",
+    alignItems: "center",
+  },
+
+  DoctorOne: {
+    flexDirection: "column",
+    justifyContent: "space-around",
+    alignItems: "center",
+    marginTop: 25,
+    width: "80%",
+    height: 390,
+    backgroundColor: "#f2f2f2",
+  },
+
+  ImageOne: {
+    width: "70%",
+    height: 190,
+    marginTop: 20,
+    borderRadius: 10,
+  },
+
+  Headingtwo: {
+    marginTop: 40,
+    marginBottom: 20,
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+
+  Stars: {
+    flexDirection: "row",
+    margin: 10,
+    padding: 5,
+  },
+
+  NameofDoctor: {
+    fontWeight: "bold",
+    fontSize: 22,
+  },
+
+  SpecialofDoc: {
+    fontSize: 15,
+  },
 });
