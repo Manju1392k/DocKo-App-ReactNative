@@ -39,7 +39,7 @@ Due To some Reason's this Application is Tested and Runed in Only Android Emulat
 
 # Framework 
 
-The Below table Framework's is used in this project. To Run This Project. This Framework has been installed in system with same Version or Lastest Version.
+The Below table Framework's is used in this project. To Run This Project. This Framework has been installed in system with same Version or Latest Version.
 
 | Framework  | Version |
 | ------------- | ------------- |
